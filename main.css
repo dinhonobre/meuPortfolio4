@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baskervville SC', serif !important; /* Verifique a família da fonte */
+    margin: 0;
+    padding: 0;
+    background-image: url('./image/meuportfolio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar, .headline, .menu a, .logo {
+    font-family: 'Baskervville SC', serif;
+}
+
+.navbar {
+    background-color: #008080;
+    display: flex;
+    height: 100px;
+    flex-flow: row wrap;
+    justify-content: space-between; /* Espalhar itens */
+    align-items: center;
+    padding: 0 5%; /* Adicionar padding horizontal */
+    width: 100%; /* Garantir que a navbar ocupe 100% da largura */
+}
+
+.logo {
+    flex: 20%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.menu {
+    flex: 70%;
+    text-align: right;
+    padding: 16px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    padding: 4px;
+}
+
+.menu a:hover {
+    color: #87CEEB;
+}
+
+#botao-contato {
+    background-color: rgb(39, 36, 87);
+    padding: 10px 25px;
+    color: #fff;
+    border-radius: 8px;
+    margin-right: 10%;
+}
+
+#botao-contato:hover {
+    border: none;
+    background-color: #87CEEB;
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    padding: 0 5%; /* Padding horizontal */
+    width: 100%; /* Garantir que o header ocupe 100% da largura */
+}
+
+.headline {
+    flex: 50%;
+    padding: 20px;
+    color:#66b9b9;
+    font-size: 20px;
+}
+
+.img-headline {
+    display: flex;
+    justify-content: space-around;
+    flex: 50%;
+    font-size: 100px;
+    color: #306998;
+    padding: 20px;
+}
+
+.img-headline i {
+    padding: 20px;
+    animation: spin-coin 4s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+.fab.fa-js { color: #f7df1e; }
+.fab.fa-node-js { color: #68A063; }
+.fab.fa-react { color: #61dafb; }
+.fab.fa-css3-alt { color: #264de4; }
+.fab.fa-html5 { color: #e34c26; }
+
+@keyframes spin-coin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.projects {
+    padding: 50px 5%;
+    text-align: center;
+    color: #fff;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-grid, .project-info, h3, p, a {
+    color: #66b9b9;
+}
+
+.project-card {
+    position: relative;
+    height: 300px; /* Defina uma altura fixa para garantir que todos os cards tenham o mesmo tamanho */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #008080;
+    text-align: center;
+    padding-top: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    .btn {
+    background-color: #66b9b9;
+    }
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para legibilidade */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008080;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #004d4d;
+}
+
+
+
+
+#section-knowledge {
+    color: #fff;
+    text-align: center;
+}
+
+.section-description {
+    padding-top: 12px;
+    padding-bottom: 24px;
+}
+
+.knowledge-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 5%;
+}
+
+.knowledge-category {
+    flex-basis: 30%;
+    background-color: transparent; /* Cor leve e neutra para o fundo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza o efeito de zoom e sombra */
+}
+
+.knowledge-category:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do item em 5% */
+    box-shadow: 0 8px 12px rgba(175, 172, 172, 0.829); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+
+.knowledge-category h3 {
+    font-size: 24px;
+    color: #008080;
+    margin-bottom: 15px;
+}
+
+.knowledge-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.knowledge-category ul li {
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+.contact-section {
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #008080;
+}
+
+.text-center p {
+    font-size: 18px;
+    color: #008080;
+    margin-bottom: 40px;
+}
+
+.form-control {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-label {
+    color: #008080;
+}
+
+.text-decoration-none {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-decoration-none:hover {
+    text-decoration: underline;
+}
+
+.text-center {
+    color: #008080;
+
+.btn {
+    background-color: #004d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #87CEEB;
+}
+}
+
+.links-contact {
+    color: #008080;
+}
+
+.links-contact:hover {
+    color: #87CEEB;
+}
+
+.footer {
+    background-color: #004d4d;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.linkFooter {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.linkFooter:hover {
+    text-decoration: underline;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.linkFooter {
+    color: #008080;
+    display: inline;
+    margin: 0 10px;
+}
+
+.linkFooter:hover {
+    color: #87CEEB;
+}
+
+
