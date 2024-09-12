@@ -18,6 +18,7 @@ body {
 }
 
 .navbar {
+    position: fixed;
     background-color: #008080;
     display: flex;
     height: 100px;
@@ -80,6 +81,10 @@ body {
     font-size: 20px;
 }
 
+.h2, .p {
+    color:#17b3b3 ;
+}
+
 .img-headline {
     display: flex;
     justify-content: space-around;
@@ -140,7 +145,8 @@ body {
 }
 
 .project-grid, .project-info, h3, p, a {
-    color: #66b9b9;
+    font-weight: bold;
+    color: #136161;
 }
 
 .project-card {

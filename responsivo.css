@@ -1,0 +1,91 @@
+/* Estilos gerais para dispositivos móveis */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        flex: none;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .menu {
+        text-align: center;
+        padding: 10px;
+        display: none; /* Inicialmente escondido, será mostrado com JavaScript */
+    }
+
+    .menu.active {
+        display: block; /* Mostra o menu quando ativado */
+    }
+
+    .navbar .toggle-button {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .headline {
+        text-align: center;
+    }
+
+    .img-headline {
+        flex-direction: column;
+        font-size: 80px;
+    }
+
+    .img-headline i {
+        padding: 10px;
+    }
+
+    .projects, .contact-section {
+        padding: 30px 5%;
+    }
+
+    .knowledge-section {
+        flex-direction: column;
+    }
+
+    .knowledge-category {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para dispositivos maiores, como tablets e desktops */
+@media (max-width: 992px) and (min-width: 769px) {
+    .navbar {
+        height: auto;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .img-headline {
+        font-size: 90px;
+    }
+}
