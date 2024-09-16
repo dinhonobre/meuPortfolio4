@@ -1,6 +1,7 @@
 /* Estilos gerais para dispositivos móveis */
 @media (max-width: 768px) {
     .navbar {
+        display: block;
         flex-direction: column;
         height: auto;
     }
@@ -9,6 +10,16 @@
         flex: none;
         text-align: center;
         font-size: 28px;
+    }
+
+    #botao-contato {
+        display: block;
+        align-items: center;
+        width: 100%;
+    }
+
+    .toggle-button {
+        display: block; /* Mostra o botão somente em telas menores */
     }
 
     .menu {
@@ -22,13 +33,14 @@
     }
 
     .navbar .toggle-button {
-        display: block;
+        display:block;
         font-size: 24px;
         background: none;
         border: none;
         color: #fff;
         cursor: pointer;
         margin: 10px;
+        
     }
 
     .header {
@@ -42,6 +54,7 @@
     }
 
     .img-headline {
+        display: none;
         flex-direction: column;
         font-size: 80px;
     }

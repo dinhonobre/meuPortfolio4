@@ -36,6 +36,11 @@ body {
     font-size: 34px;
 }
 
+/* Estilos para o menu normal (desktop) */
+.toggle-button {
+    display: none; /* Não exibe o botão em telas grandes */
+}
+
 .menu {
     flex: 70%;
     text-align: right;
