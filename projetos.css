@@ -1,0 +1,166 @@
+/* ============================================================
+   SEÇÃO "MEUS PROJETOS"
+   Cores, tamanhos e cantos ficam centralizados nas variáveis
+   abaixo: mude aqui e todos os cards mudam juntos.
+   ============================================================ */
+
+:root {
+    --projeto-cor-principal: #008080;   /* Verde-petróleo da marca */
+    --projeto-cor-escura: #004d4d;      /* Hover dos botões */
+    --projeto-fundo-card: #ffffff;      /* Fundo do card */
+    --projeto-texto: #1f2937;           /* Texto principal */
+    --projeto-texto-suave: #4b5563;     /* Descrição */
+    --projeto-etiqueta-fundo: #e6f2f2;  /* Fundo das tecnologias */
+    --projeto-raio: 14px;               /* Arredondamento dos cantos */
+    --projeto-sombra: 0 10px 30px rgba(0, 0, 0, 0.18);
+    --projeto-fonte: 'Inter', system-ui, sans-serif;
+}
+
+/* Área da seção */
+.projetos {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.projetos .section-title,
+.projetos .section-description {
+    color: #fff;
+}
+
+/* Grade: 2 colunas no PC, 1 no celular (automático).
+   Para 3 colunas, aumente o max-width para 1200px. */
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Card */
+.card-projeto {
+    display: flex;
+    flex-direction: column;
+    background: var(--projeto-fundo-card);
+    border-radius: var(--projeto-raio);
+    box-shadow: var(--projeto-sombra);
+    overflow: hidden;
+    font-family: var(--projeto-fonte);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+/* Imagem do topo do card */
+.card-projeto .capa {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--projeto-etiqueta-fundo);
+}
+
+.card-projeto .capa img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Selo no canto da imagem (ex.: "No ar", "Em desenvolvimento") */
+.card-projeto .selo {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--projeto-cor-principal);
+}
+
+.card-projeto .selo.em-breve {
+    color: #b45309;
+}
+
+/* Corpo do card */
+.card-projeto .corpo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    flex: 1;
+}
+
+.card-projeto .corpo h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--projeto-texto);
+}
+
+.card-projeto .corpo p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--projeto-texto-suave);
+}
+
+/* Etiquetas de tecnologia */
+.card-projeto .tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.card-projeto .tecnologias li {
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--projeto-etiqueta-fundo);
+    color: var(--projeto-cor-principal);
+}
+
+/* Botões (ficam sempre no rodapé do card) */
+.card-projeto .acoes {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.card-projeto .botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--projeto-cor-principal);
+    color: #fff;
+    transition: background 0.2s ease;
+}
+
+.card-projeto .botao:hover {
+    background: var(--projeto-cor-escura);
+    color: #fff;
+}
+
+/* Botão desativado (projeto ainda não publicado) */
+.card-projeto .botao.desativado {
+    background: #d1d5db;
+    color: #4b5563;
+    pointer-events: none;
+}
